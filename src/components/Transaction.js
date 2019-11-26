@@ -1,5 +1,7 @@
 import React from 'react';
 import * as ec from "elliptic";
+import SHA256 from "elliptic";
+import Blockchain from "./Blockchain";
 
 class Transaction{
   constructor(fromAddress, toAddress, amount){
@@ -33,3 +35,5 @@ class Transaction{
     return publicKey.verify(this.calculateHash(), this.signature);
   }
 }
+
+export default Transaction
