@@ -11,22 +11,25 @@ import {
 
 import LiveSportsLayout from './LiveSports';
 import CheckoutLayout from './Checkout';
+import ChainLayout from './Chain';
 
 class AppLayout extends Component {
     render() {
         return (
             <Router>
                 <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/LiveSports">One View Sports</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="/LiveSports">Live Sports</Nav.Link>
-      <Nav.Link href="/Checkout">Checkout</Nav.Link>
-    </Nav>
+                <Navbar.Brand href="/LiveSports">One View Sports</Navbar.Brand>
+                 <Nav className="mr-auto">
+                <Nav.Link href="/LiveSports">Live Sports</Nav.Link>
+                <Nav.Link href="/Checkout">Checkout</Nav.Link>
+                <Nav.Link href="/Chain">Blockchain</Nav.Link>
+                </Nav>
                 </Navbar>
                 <Switch>
                     <Route exact path="/" component={LiveSportsLayout} />
                     <Route path="/LiveSports" component={LiveSportsLayout} />
                     <Route path="/Checkout" component={CheckoutLayout} />
+                    <Route path="/Chain" component={ChainLayout} />
                 </Switch>
             </Router>
         );

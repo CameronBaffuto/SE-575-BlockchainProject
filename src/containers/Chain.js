@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import Blockchain from "./Blockchain";
 
-export default class CheckoutLayout extends Component {
+export default class ChainLayout extends Component {
     render() {
         return (
             <div>
-                <h1>something...</h1>
             </div>
         );
     }
