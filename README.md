@@ -2,6 +2,8 @@
 
 React app to track pay-per-view sports events using Blockchain 
 
+![Architecture](https://github.com/CameronBaffuto/SE-575-BlockchainProject/blob/master/Blockchain-SportsApp.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
