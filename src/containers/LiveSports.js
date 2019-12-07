@@ -2,15 +2,25 @@ import React, { Component } from 'react';
 import Card from "react-bootstrap/Card";
 
 import './LiveSports.css';
-
+import Image from "react-bootstrap/Image";
 
 
 export default class LiveSportsLayout extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            gameId1: "Liverpool",
+            gameId2: "Bayern Munich",
+            gameId3: "Barcelona"
+
+        }
+
+    }
     render() {
         return (
        <container id="cardContainer">
             <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+  <Card.Img variant="top" src={require('./images/liverpool.jpg')} />
   <Card.Body>
     <Card.Title>Preimer League</Card.Title>
     <Card.Text>
@@ -18,12 +28,12 @@ export default class LiveSportsLayout extends Component {
     </Card.Text>
   </Card.Body>
   <Card.Body>
-    <Card.Link href="./Checkout">Watch Live</Card.Link>
+    <Card.Link href="./Liverpool">Watch Live</Card.Link>
   </Card.Body>
             </Card>
 
         <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+  <Card.Img variant="top" src={require('./images/bayern.jpg')} />
   <Card.Body>
     <Card.Title>Bundesliga</Card.Title>
     <Card.Text>
@@ -31,12 +41,12 @@ export default class LiveSportsLayout extends Component {
     </Card.Text>
   </Card.Body>
   <Card.Body>
-    <Card.Link href="./Checkout">Watch Live</Card.Link>
+    <Card.Link href="./Bayern">Watch Live</Card.Link>
   </Card.Body>
         </Card>
 
           <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+  <Card.Img variant="top" src={require('./images/barca.jpg')} />
   <Card.Body>
     <Card.Title>La Liga</Card.Title>
     <Card.Text>
@@ -44,10 +54,11 @@ export default class LiveSportsLayout extends Component {
     </Card.Text>
   </Card.Body>
   <Card.Body>
-    <Card.Link href="./Checkout">Watch Live</Card.Link>
+    <Card.Link href="./Barca">Watch Live</Card.Link>
   </Card.Body>
           </Card>
        </container>
+
         );
     }
 }
